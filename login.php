@@ -1,3 +1,8 @@
+
+<?php 
+session_start();
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -14,6 +19,18 @@
     <div class="container py-5">
         <div class="row d-flex justify-content-center">
             <div class="col-md-6">
+            <?php
+            if(isset($_SESSION['status'])){
+                ?>
+                <div class="alert alert-danger" role="alert">
+                <?php echo $_SESSION['status']?>
+                </div>
+
+            <?php
+            }
+
+
+            ?>
                 <div class="card">
                     <h5 class="card-header">Login Form</h5>
                     <div class="card-body">

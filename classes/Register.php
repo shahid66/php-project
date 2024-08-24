@@ -26,7 +26,7 @@ public function AddUser($data){
         $mail->SMTPAuth=true;
         $mail->Host='smtp.gmail.com';
         $mail->Username='kk.shahid44@gmail.com';
-        $mail->Password='@shahid@526121';
+        $mail->Password='xeeu anud sxyw xmdw';
         $mail->SMTPSecure='tls';
         $mail->Port='587';
         $mail->setFrom('kk.shahid44@gmail.com', $name);
@@ -55,7 +55,7 @@ if(empty($name) || empty($email)||empty($password)||empty($phone) ){
 $error="fild Must Not Be Empty";
 return $error;
 }else{
-    $e_query="SELECT * FROM tbl_user WHERE email='$email'";
+    $e_query="SELECT * FROM tbl_user WHERE user_email='$email'";
     $check_email = $this->db->select($e_query);
     if($check_email >0){
        $error="Email already exisit";
